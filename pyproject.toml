@@ -1,0 +1,9 @@
+[tool.pyright]
+exclude = ["**/__pycache__",
+    "records",
+    "data",
+    "cfg"
+]
+
+reportMissingImports = true
+reportMissingTypeStubs = false

@@ -1,0 +1,13 @@
+data/*
+/demo.py
+# !data/datasets3
+tmp/
+.idea/
+runs/
+records/
+*.state
+checkpoint
+.vscode/
+lmdb/*
+!lmdb/*.py
+**/__pycache__
