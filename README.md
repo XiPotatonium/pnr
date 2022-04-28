@@ -2,7 +2,7 @@
 
 ## Overview
 
-![Overview](model.png "Overview of PnRNet. In the propose stage, PnRNet computes span representations and generates coarse entity proposals with a span-based predictor. In the refine stage, the proposals are refined through a transformer decoder and finally are used to re-predict boundaries and entity classes. We collect multi-scale features from span features generated in the propose stage to provide hierarchical contextual information in proposal refinement. For simplicity of demonstration, we show a PnRNet with span enumeration length limited to $L=4$.")
+![Overview](doc/model.png "Overview of PnRNet. In the propose stage, PnRNet computes span representations and generates coarse entity proposals with a span-based predictor. In the refine stage, the proposals are refined through a transformer decoder and finally are used to re-predict boundaries and entity classes. We collect multi-scale features from span features generated in the propose stage to provide hierarchical contextual information in proposal refinement. For simplicity of demonstration, we show a PnRNet with span enumeration length limited to $L=4$.")
 
 ## Usage
 
@@ -37,6 +37,9 @@ Data format:
 
 ### Train
 
+We train our model using RTX-3090 when training with ACE-04, ACE-05, KBP-17.
+And using RTX-A6000 when training with GENIA and Conll-03.
+
 ```bash
 python main.py train --config cfg/ace05/train.conf
 ```
@@ -45,20 +48,34 @@ python main.py train --config cfg/ace05/train.conf
 
 Set `model_path` and `tokenzier_path` to the checkpoint dir before running.
 
+We provide our checkpoints on [ACE04 and ACE05](https://drive.google.com/drive/folders/1Hg3OoRDzOiCpUPPGI85H3OVzuIIRBBa3?usp=sharing)
+
 ```bash
 python main.py eval --config cfg/ace05/eval.conf
 ```
 
-## Evaluation
-
-We perform evaluation on RTX-3090
-
-TODO
-
 ## Appendix
 
-Please refer to [Appendix](appendix.md)
+Please refer to [Appendix](doc/appendix.md)
 
 ## Citation
 
-TODO
+```
+@misc{https://doi.org/10.48550/arxiv.2204.12732,
+  doi = {10.48550/ARXIV.2204.12732},
+
+  url = {https://arxiv.org/abs/2204.12732},
+
+  author = {Wu, Shuhui and Shen, Yongliang and Tan, Zeqi and Lu, Weiming},
+
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+
+  title = {Propose-and-Refine: A Two-Stage Set Prediction Network for Nested Named Entity Recognition},
+
+  publisher = {arXiv},
+
+  year = {2022},
+
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
