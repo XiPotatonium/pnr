@@ -86,21 +86,18 @@ Please refer to [Appendix](doc/appendix.md)
 ## Citation
 
 ```
-@misc{https://doi.org/10.48550/arxiv.2204.12732,
-  doi = {10.48550/ARXIV.2204.12732},
-
-  url = {https://arxiv.org/abs/2204.12732},
-
-  author = {Wu, Shuhui and Shen, Yongliang and Tan, Zeqi and Lu, Weiming},
-
-  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
-
-  title = {Propose-and-Refine: A Two-Stage Set Prediction Network for Nested Named Entity Recognition},
-
-  publisher = {arXiv},
-
-  year = {2022},
-
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@inproceedings{ijcai2022p613,
+  title     = {Propose-and-Refine: A Two-Stage Set Prediction Network for Nested Named Entity Recognition},
+  author    = {Wu, Shuhui and Shen, Yongliang and Tan, Zeqi and Lu, Weiming},
+  booktitle = {Proceedings of the Thirty-First International Joint Conference on
+               Artificial Intelligence, {IJCAI-22}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Lud De Raedt},
+  pages     = {4418--4424},
+  year      = {2022},
+  month     = {7},
+  note      = {Main Track},
+  doi       = {10.24963/ijcai.2022/613},
+  url       = {https://doi.org/10.24963/ijcai.2022/613},
 }
 ```
